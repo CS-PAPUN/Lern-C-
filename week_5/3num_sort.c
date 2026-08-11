@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    int x,y,z;
+    scanf("%d %d %d", &x,&y,&z);
+    if(x<=y && x<=z && y<=z){ //xyz
+        printf("%d %d %d",x,y,z);
+    }else if(x<=y && x<=z && y>=z){ //xzy
+        printf("%d %d %d",x,z,y);
+    }else if(y<=x && y<=z && x<=z){ //yxz
+        printf("%d %d %d",y,x,z);
+    }else if(y<=x && y<=z && x>=z){ //yzx
+        printf("%d %d %d",y,z,x);
+    }else if(z<=x && z<=y && x<=y){ //zxy
+        printf("%d %d %d",z,x,y);
+    }else{printf("%d %d %d",z,y,x);}
+
+}
